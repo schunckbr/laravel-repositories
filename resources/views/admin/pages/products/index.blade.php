@@ -19,6 +19,7 @@
             <tr>
                 <th>Nome</th>
                 <th>Preço</th>
+                <th>Imagem</th>
                 <th width="100">Ações</th>
             </tr>
         </thead>
@@ -28,7 +29,12 @@
             <tr>
                 <td>{{$product->name}}</td>
                 <td>{{$product->price}}</td>
-                <td>
+               <td>
+                    @if($product->image)
+                    <img src="{{ url("storage/{$product->image}") }}" alt="{{ $product->name }}" style="max-width:100px;">
+                @endif
+               </td>
+               <td>
                     <a href="{{ route('products.show', $product->id) }}">Detalhes</a>
                     <a href="{{ route('products.edit', $product->id) }}">Editar</a>
                 </td>

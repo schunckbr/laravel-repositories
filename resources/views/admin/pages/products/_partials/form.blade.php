@@ -14,5 +14,9 @@
 </div>
 
 <div class="form-group">
-    <button type="submit">Salvar</button>
+    <input type="file" name="image" class="form-control">
+</div>
+
+<div class="form-group">
+    <button type="submit" class="btn btn-success">Salvar</button>
 </div>
